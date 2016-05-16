@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="hibernateCfgXml">
+
+    <class name="Endereco" table="endereco">
+        <id name="codigo" column="id" type="integer"/>
+        
+        <property name="rua" column="rua" type="string" not-null="true"/>
+        <property name="estado" column="estado" type="string" not-null="true"/>
+        <property name="cep" column="cep" type="string"/>
+        <property name="cidade" column="cidade" type="string"/>        
+        <property name="latitude" column="latitude" type="float"/>
+        <property name="longitude" column="longitude" type="float"/>
+    </class>
+
+</hibernate-mapping>
