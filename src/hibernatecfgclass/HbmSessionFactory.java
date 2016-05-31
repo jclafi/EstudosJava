@@ -14,7 +14,7 @@ class HbmSessionFactory {
         config.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/estudosjava"); 
         config.setProperty("hibernate.connection.username", "postgres");
         config.setProperty("hibernate.connection.password", "postgres");
-        config.setProperty("hibernate.show_sql", "true");           
+        config.setProperty("hibernate.show_sql", "false");           
 
        	for (int index = 0; index < classes.length; index++)        
        		config.addClass(classes[index].getClass());

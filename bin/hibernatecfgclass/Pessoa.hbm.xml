@@ -6,7 +6,7 @@
 
    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="hibernateCfgClass">
+<hibernate-mapping package="hibernatecfgclass">
 
     <class name="Pessoa" table="pessoa">
         <id name="idGeral" column="id_geral" type="long"/>
