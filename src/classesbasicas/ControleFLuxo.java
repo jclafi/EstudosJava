@@ -71,16 +71,16 @@ public class ControleFLuxo {
 	    //EXERCÍCIOS APOSTILA 
 	    //String sexoPorExtenso = sexo == 'M' ? "masculino" : "feminino"; - Operador Ternário
 	    String sexoPorExtenso = ("F");
-	    if ((sexoPorExtenso == ("M")) && (sexoPorExtenso instanceof String))
+	    if ((sexoPorExtenso.toString().equals("M")) && (sexoPorExtenso instanceof String))
 	    	System.out.println("IF => Masculino");
 	    else
 	    {
-	    	if ((sexoPorExtenso == ("F")) && (sexoPorExtenso instanceof String))
+	    	if ((sexoPorExtenso.toString().equals("F")) && (sexoPorExtenso instanceof String))
 	    		System.out.println("IF => Feminino");
 	    }
 	    
 	    //Equals String
-	    if (sexoPorExtenso.equals("F")) 
+	    if (sexoPorExtenso.toString().equals("F")) 
 	    	System.out.println("IF => Feminino");
 	    else
 	    	System.out.println("IF => Masculino");
@@ -101,11 +101,11 @@ public class ControleFLuxo {
 	    }
 	    
 	    String strSexo = "F";
-	    strSexo = ((sexoPorExtenso == "M") ? "Masculino" : "Feminino"); 
+	    strSexo = ((sexoPorExtenso.toString().equals("M")) ? "Masculino" : "Feminino"); 
 	    System.out.println("Ternário => " + strSexo);
 	    
 	    strSexo = "M";
-	    strSexo = ((sexoPorExtenso.equals(strSexo)) ? "Igual" : "Diferente"); 
+	    strSexo = ((sexoPorExtenso.toString().equals(strSexo)) ? "Igual" : "Diferente"); 
 	    System.out.println("Ternário => " + strSexo);	    
 	    
 	    System.gc();

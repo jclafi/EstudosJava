@@ -96,9 +96,9 @@ public class ClasseOperador2 {
 		mensagem += (intTern2 > intTern3 ? ("intTern2: " + intTern2) : ("intTern3: " + intTern3));
 		System.out.println(mensagem);
 		
-		//Atribuição com Operador Ternário
-		boolean c = false;
-		String str = ( (c =!c) ? ((c = !c) ? "HELLO" : "hello") : ((c) ? "PRINT" : "print") );
+		//Atribuição com Operador Ternário - Não é comparação é atribuição
+		boolean c = false;        //===========================    =======================//
+		String str = ( (c = !c) ? ((c = !c) ? "HELLO" : "hello") : ((c) ? "PRINT" : "print") );
 		System.out.println("Valor: " + str);		
 		
 	}
