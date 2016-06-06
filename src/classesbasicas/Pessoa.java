@@ -140,7 +140,7 @@ public class Pessoa {
 		return (rgigual && nomeigual);		
 	}	
 
-	//Coleçõs sobrescrever método harsCode
+	//Coleções sobrescrever método harsCode
 	//annotation
 	@Method (nomeMetodo = "public int hashCode()")		
 	public int hashCode() {
