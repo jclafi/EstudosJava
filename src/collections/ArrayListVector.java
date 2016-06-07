@@ -8,10 +8,10 @@ import java.util.Iterator;
 import classesbasicas.Pessoa;
 import javax.swing.JOptionPane;
 
-public class ClasseArrayList {
+public class ArrayListVector {
 	
 	/*
-	 *	List - Interface que define uma coleção indexada
+	 *	List - Interface que define uma coleção indexada permitindo Objetos repetidos
 	 *	Iterator - Interface utilizada para navegar entre os elementos da Lista
 	 *	Array List - Implementação de List baseada em Array não sincronizada, não usar em multi-tarefa
 	 *  Vector - Implementação de List legada baseada em Array sincronizada, utilizada em multi-tarefa
@@ -43,7 +43,7 @@ public class ClasseArrayList {
 				case 0 : collectionList.add(index, objPessoa1); break;
 				case 1 : collectionList.add(index, objPessoa2); break;
 				case 2 : collectionList.add(index, objPessoa3);
-				default : System.out.println("Índice: " + index +  " - Total Posições: " + collectionList.size());;
+				default : System.out.println("Índice: " + index +  " - Total Posições: " + collectionList.size());
 
 			}
 			
@@ -81,8 +81,10 @@ public class ClasseArrayList {
 			
 		}
 		
+		/*
+		 *  Remove um Item especificado pelo usuário da Lista 
+		 */
 		String indicePessoa = JOptionPane.showInputDialog("Digite o índice a ser removido!");
-		
 		boolean dadosOk = false;
 		for (int index = 0; index < indicePessoa.length(); index++)
 			dadosOk = Character.isDigit(indicePessoa.charAt(index));
@@ -92,13 +94,42 @@ public class ClasseArrayList {
 			if (collectionList.get(Integer.parseInt(indicePessoa)) != null) {
 				
 				Pessoa objTemp = (Pessoa) collectionList.remove(Integer.parseInt(indicePessoa));				
-				System.out.println("Pessoa Removida:" + objTemp.toString());
+				JOptionPane.showMessageDialog(null,"Pessoa Removida:" + objTemp.toString());
 				
 			}
 			else
 				JOptionPane.showMessageDialog(null, "Atenção objeto não localizado");
 			
 		}		
+		else
+			JOptionPane.showMessageDialog(null, "Atenção o código deve possuir somente valores numéricos !");
+		
+		/*
+		 * Utiliza uma Vector sincronizado para inserir e percorrer os Objetos
+		 */
+		for (int index = 0; index < 3; index++) {
+			
+			switch (index) {
+			
+				case 0 : vectorList.add(index, objPessoa1); break;
+				case 1 : vectorList.add(index, objPessoa2); break;
+				case 2 : vectorList.add(index, objPessoa3);
+				default : System.out.println("Índice: " + index +  " - Total Posições: " + collectionList.size());;
+
+			}
+			
+		}
+		
+		/*
+		 * Lista o vector com Iterator
+		 */
+		Iterator<Pessoa> objIt = vectorList.iterator();
+		while (objIt.hasNext()) {
+			
+			Pessoa objTemp = (Pessoa) objIt.next();			
+			System.out.println("Pessoa: " + objTemp.toString());
+			
+		}
 		
 	}
 	

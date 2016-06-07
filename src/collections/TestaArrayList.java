@@ -4,7 +4,7 @@ public class TestaArrayList {
 	
 	public static void testaArrayList() {
 		
-		ClasseArrayList objArrayList = new ClasseArrayList();
+		ArrayListVector objArrayList = new ArrayListVector();
 		try {
 			objArrayList.testeArrayList();
 		}
